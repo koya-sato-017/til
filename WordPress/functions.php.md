@@ -28,12 +28,9 @@
 - single.phpの`header`の上に`<?php the_post_thumbnail(); ?>`を記述すると、imgタグをそのまま使ってしまうので、下記のようにする
 
 `<?php
-
-  $id = get_post_thumbnail_id();
-  
-  $img = wp_get_attachment_image_src($id);
-  
-  ?>`
+$id = get_post_thumbnail_id();
+$img = wp_get_attachment_image_src($id);
+?>`
 
 `background-image: url('<?php echo $img[0] ?>')`
 
