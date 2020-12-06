@@ -1,4 +1,4 @@
-# @mixin
+# @mixin と @content
 
 ## @mixin を定義
 
@@ -16,7 +16,7 @@
 
 ## 引数の初期値を指定する
 
-`@mixin mixin名($hoge: 123){}`
+`@mixin mixin名($hoge: 123
 
 `@include mixin名();`
 
@@ -46,5 +46,5 @@ img {
 }
 ```
 
-* `margin: 0`が`@content`に渡った後、`@media`が`@include`に渡る
+* `margin: 0;`が`@content`に渡った後、`@media`が`@include`に渡る
 
