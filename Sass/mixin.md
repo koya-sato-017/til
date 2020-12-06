@@ -1,6 +1,6 @@
-# mixin
+# @mixin
 
-## mixin を定義
+## @mixin を定義
 
 
 `@mixin mixin名 { コード }`
@@ -14,3 +14,12 @@
 `@mixin mixin名($hoge){}`
 
 `@include mixin名($hoge);`
+
+## 引数の初期値を指定する
+
+`@mixin mixin名($hoge: 123){}`
+
+`@include mixin名();`
+
+* 引数を指定しないと、初期値が入る
+
