@@ -136,7 +136,7 @@ function addList(user) {
 
 * コメントを追加する
 
-### 完成したコード
+## 完成したコード
 ```index.js
 // DOM
 const button = document.getElementById("addBtn");
