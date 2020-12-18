@@ -36,7 +36,7 @@ add_theme_support('post-thumbnails');
 <?php
   $id = get_post_thumbnail_id();
   $img = wp_get_attachment_image_src($id);
-  ?>
+?>
 ```
 
 ```single.php
