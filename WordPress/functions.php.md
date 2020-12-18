@@ -23,19 +23,22 @@
 
 ## アイキャッチ画像を表示させる
 
-`add_theme_support('post-thumbnails');`
+- function.php ファイルに以下のように書く
+```function.php
+add_theme_support('post-thumbnails');
+```
 
 - 投稿一覧のアイキャッチ画像に画像を指定
 
 - single.phpの`header`の上に`<?php the_post_thumbnail(); ?>`を記述すると、imgタグをそのまま使ってしまうので、下記のようにする
 
-`<?php`
+```single.php
+<?php
+  $id = get_post_thumbnail_id();
+  $img = wp_get_attachment_image_src($id);
+  ?>
+```
 
-`$id = get_post_thumbnail_id();`
-
-`$img = wp_get_attachment_image_src($id);`
-
-`?>`
-
-`background-image: url('<?php echo $img[0] ?>')`
-
+```single.php
+style="background-image: url('<?php echo $img[0]; ?>')">
+```
