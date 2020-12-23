@@ -43,3 +43,18 @@ add_theme_support('post-thumbnails');
 ```single.php
 style="background-image: url('<?php echo $img[0]; ?>')">
 ```
+
+## 独自リソースを一元管理する
+
+- header.php で読み込んでいる独自のスクリプトやスタイルシートを一元管理できるようにする  
+- アクションフックからスクリプトとスタイルを読み込む  
+
+```function.php
+<?php
+function my_enqueue_scripts() {
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('bundle_js', get_template_directory_uri(). '/assets/js/bundle.js', array());
+    wp_enqueue_style('my_styles', get_template_directory_uri(). '/assets/css/styles.css', array());
+}
+add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
+```
