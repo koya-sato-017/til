@@ -31,4 +31,13 @@ WordPressの場合、管理画面は検索エンジンにインデックスさ�
 `<meta name="robots" content="noindex">`  
 
 ### タイトルとメタディスクリプション
+- タイトル：`<title>~</title>`にあたる部分  
+- メタディスクリプション：`<meta name="description" content="" /`にあたる部分  
+「サイトの簡単な説明」の役割を果たし、タイトル同様にSEO上、非常に重要な要素  
+ここがしっかりと設定されていないと、それだけでSEO的にNG  
 
+### Web解析でよく使われるサービス
+- Google Analytics  
+- Google Search Console  
+- Google Tag Manager  
+- GRC  
